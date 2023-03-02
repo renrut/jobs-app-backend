@@ -18,6 +18,10 @@ async def get_jobs_for_user(id: str, request: Request) -> list[Job]:
     embedding_generator = EmbeddingGenerator(config.get("open_ai_models", "embeddings_model"),
                                              config.get("open_ai_models", "completion_model"))
     job_store = JobStore(config.get("vector_store", "environment"), config.get("vector_store", "index_name"))
+    # get user from user store
+    # get generated embedding for user from embedding generator
+    # get k nearest jobs from job store
+    # return jobs
 
 
 
